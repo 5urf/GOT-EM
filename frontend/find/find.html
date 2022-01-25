@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="find.css" />
+    <link rel="stylesheet" href="../toast/Toast.css" />
+    <title>아이디•비밀번호 찾기</title>
+  </head>
+  <body>
+    <main role="main">
+      <a href="../beforeMainPage/beforMainPage.html"><h2 class="logo"></h2></a>
+      <section class="find-form">
+        <div class="find-form-area">
+          <h1>아이디/비밀번호 찾기</h1>
+          <div class="id-forgot-wrap">
+            <form action="/find-email" method="post" id="email-form">
+              <div class="input-area">
+                <label for="phoneNumber">이메일 계정 찾기</label>
+                <div class="txt-area">
+                  <span>입력한 이메일로 이메일 계정을 보내드립니다.</span>
+                </div>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="가입시 입력한 휴대폰번호를 입력하세요. ex)01000000000"
+                  autocomplete="off"
+                  required
+                />
+                <div class="error-area">
+                  <span class="phErrorTxt"></span>
+                </div>
+                <input
+                  type="email"
+                  name="receiveEmail"
+                  id="receiveEmail"
+                  placeholder="이메일계정을 받아보실 이메일 입력하세요."
+                  autocomplete="off"
+                  required
+                />
+                <div class="error-area">
+                  <small></small>
+                </div>
+              </div>
+              <button type="submit" class="email-btn">이메일 계정 전송</button>
+            </form>
+          </div>
+          <div class="pw-forgot-wrap">
+            <form action="/reset-password" method="post" id="pw-form">
+              <div class="input-area">
+                <label for="email">비밀번호 찾기</label>
+                <div class="txt-area">
+                  <span
+                    >가입시 등록한 이메일로 임시 비밀번호를 보내드립니다.</span
+                  >
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="가입시 입력한 이메일을 입력하세요."
+                  autocomplete="off"
+                  required
+                />
+                <div class="error-area">
+                  <small></small>
+                </div>
+              </div>
+              <button type="submit" class="pw-btn">임시 비밀번호 전송</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="find.js"></script>
+  <script src="../toast/Toast.js"></script>
+</html>

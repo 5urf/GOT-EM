@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 페이지</title>
+    <script src="./js/checkAccessToken.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/meterial_icon.css" />
+    <link rel="stylesheet" href="./css//font/font.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/adminPageForm/style.css" />
+    <link rel="stylesheet" href="./css/adminPageForm/form.css" />
+    <link rel="stylesheet" href="./css/adminPageForm/media_query.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav>
+          <div class="navContainer">
+            <div class="nav__inner">
+              <h1>
+                <a href="../main/mainPage.html" class="navLogo">GOT'EM</a>
+              </h1>
+              <div class="navUser">
+                <img src="" alt="유저프로필" id="navUserImg" />
+                <div class="navUser">
+                  <ul>
+                    <li>
+                      <a href="#" class="navUserBtn"></a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="../user/userPage.html">마이페이지</a>
+                        </li>
+                        <li>
+                          <button type="button" id="logoutBtn">로그아웃</button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="content_container">
+        <aside class="side_bar">
+          <nav class="side_bar_nav">
+            <h3 class="side_bar_title">관리자 페이지</h3>
+            <div class="side_bar_menu_wrap">
+              <ul class="side_bar_menu">
+                <li>
+                  <a href="adminPage.html">상품관리</a>
+                </li>
+                <li class="active">
+                  <strong><a href="#">상품등록</a></strong>
+                </li>
+                <li><a href="adminPageNotice.html">공지관리</a></li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+        <section class="form_section">
+          <form
+            id="input_product_form"
+            method="post"
+            action="http://localhost:3001/products"
+            name="input_product_form"
+            accept-charset="UTF-8"
+          >
+            <h2>상품등록</h2>
+            <div class="form_control">
+              <div class="form_control_column">
+                <div class="form_control_image">
+                  <label for="input_product_image">상품이미지</label>
+                  <span
+                    id="check_icon"
+                    class="material-icons hidden"
+                    data-index-number="1"
+                  >
+                    check_circle
+                  </span>
+                </div>
+                <input
+                  type="file"
+                  id="input_product_image"
+                  name="imageUrl"
+                  accept="image/png, image/jpeg"
+                  alt="상품이미지"
+                />
+              </div>
+            </div>
+            <div class="form_control_button">
+              <input
+                id="confirm_product_image_btn"
+                type="button"
+                value="확정하기"
+              />
+            </div>
+            <div class="form_control">
+              <div class="form_control_column">
+                <label for="input_product_name">상품명</label>
+                <input
+                  type="text"
+                  id="input_product_name"
+                  name="modelName"
+                  placeholder="상품명을 입력하세요"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+              <div class="form_control_column">
+                <label for="input_product_series">시리즈</label>
+                <input
+                  type="text"
+                  id="input_product_series"
+                  name="modelSeries"
+                  placeholder="시리즈를 입력하세요"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+            </div>
+            <div class="form_control">
+              <div class="form_control_column">
+                <label for="input_product_number">모델번호</label>
+                <input
+                  type="text"
+                  id="input_product_number"
+                  name="modelNumber"
+                  placeholder="모델번호를 입력하세요"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+              <div class="form_control_column">
+                <label for="input_product_price">발매가</label>
+                <input
+                  type="text"
+                  id="input_product_price"
+                  name="price"
+                  placeholder="발매가를 입력하세요"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+            </div>
+            <div class="form_control">
+              <div class="form_control_column">
+                <label for="input_product_year">출시년도</label>
+                <input
+                  type="text"
+                  id="input_product_year"
+                  name="releaseDate"
+                  placeholder="YYYY-MM-DD"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+              <div class="form_control_column">
+                <label for="input_product_color">색상</label>
+                <input
+                  type="text"
+                  id="input_product_color"
+                  name="color"
+                  placeholder="색상을 입력하세요"
+                  autocomplete="off"
+                  required
+                />
+                <p class="form_guideline"></p>
+              </div>
+            </div>
+            <div class="form_control_button">
+              <input type="button" id="preview_button" value="임시저장" />
+              <input type="submit" id="post_button" value="등록하기" disabled />
+              <input
+                type="button"
+                id="remove_button"
+                class="disabled"
+                value="삭제하기"
+                disabled
+              />
+            </div>
+          </form>
+        </section>
+        <section class="product_section">
+          <h2>미리보기</h2>
+          <div class="product_image_wrap">
+            <img class="product_image hidden" src="" alt="상품 이미지" />
+          </div>
+          <div class="product_image_change_button">
+            <input id="prev_button" type="button" value="prev" />
+            <input id="next_button" type="button" value="next" />
+          </div>
+          <div class="product_info_wrap">
+            <h3 class="product_name">상품명</h3>
+            <div class="detail_product_wrap">
+              <dl class="detail_product">
+                <div class="detail_box">
+                  <dt>시리즈</dt>
+                  <dd class="product_series"></dd>
+                </div>
+                <div class="detail_box">
+                  <dt>가격</dt>
+                  <dd class="product_price"></dd>
+                </div>
+                <div class="detail_box">
+                  <dt>모델번호</dt>
+                  <dd class="product_number"></dd>
+                </div>
+                <div class="detail_box">
+                  <dt>출시일</dt>
+                  <dd class="product_year"></dd>
+                </div>
+                <div class="detail_box">
+                  <dt>색상</dt>
+                  <dd class="product_color"></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="./js/settingURL.js"></script>
+    <script src="./js/adminPageForm/adminPageFormDOM.js"></script>
+    <script src="./js/adminPageForm/adminPageImage.js"></script>
+    <script src="./js/adminPageForm/requestMethod.js"></script>
+    <script src="./js/adminPageForm/adminPageValidator.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

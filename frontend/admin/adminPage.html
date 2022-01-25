@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOT'EM</title>
+    <script src="./js/checkAccessToken.js"></script>
+    <link rel="stylesheet" href="./css//font/font.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/adminPageTable/style.css" />
+    <link rel="stylesheet" href="./css/adminPageTable/table.css" />
+    <link rel="stylesheet" href="./css/adminPageTable/media_query.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav>
+          <div class="navContainer">
+            <div class="nav__inner">
+              <h1>
+                <a href="../main/mainPage.html" class="navLogo">GOT'EM</a>
+              </h1>
+              <div class="navUser">
+                <img src="" alt="유저프로필" id="navUserImg" />
+                <div class="navUser">
+                  <ul>
+                    <li>
+                      <a href="#" class="navUserBtn"></a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="../user/userPage.html">마이페이지</a>
+                        </li>
+                        <li>
+                          <button type="button" id="logoutBtn">로그아웃</button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="content_container">
+        <aside class="side_bar">
+          <nav class="side_bar_nav">
+            <h3 class="side_bar_title">관리자 페이지</h3>
+            <div class="side_bar_menu_wrap">
+              <ul class="side_bar_menu">
+                <li class="active">
+                  <strong><a href="#">상품관리</a></strong>
+                </li>
+                <li><a href="./adminPagePost.html">상품등록</a></li>
+                <li><a href="./adminPageNotice.html">공지관리</a></li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+        <section class="product_list_section">
+          <h2>등록 상품 내역</h2>
+          <div class="product_list_wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>이미지</th>
+                  <th>모델명</th>
+                  <th>모델번호</th>
+                  <th>색상</th>
+                  <th>출시가</th>
+                  <th>출시년도</th>
+                  <th>좋아요</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <footer>
+            <span class="pagination_wrap"></span>
+          </footer>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="./js/settingURL.js"></script>
+    <script src="./js/adminPage/adminPage.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

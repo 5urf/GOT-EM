@@ -1,0 +1,17 @@
+.material-icons[data-index-number='1'] {
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  opacity: 0.5;
+  margin-left: 5px;
+}
+
+@keyframes slidein {
+  from {
+    transform: rotate(-20deg);
+    margin-right: 10px;
+  }
+  to {
+    transform: rotate(5deg);
+    margin-right: 0;
+  }
+}

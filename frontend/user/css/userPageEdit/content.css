@@ -1,0 +1,229 @@
+.content_container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  max-width: 1300px;
+  gap: 50px;
+}
+
+.product_list_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-spacing: 30px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-break: break-all;
+}
+table th,
+table td {
+  padding: 10px;
+}
+table th {
+  border-top: 2px solid #3b4890;
+  border-bottom: 2px solid #3b4890;
+}
+table td {
+  border-bottom: 1px solid #444444;
+}
+.product_list_section footer {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.product_list_section footer .pagination_ul {
+  max-width: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+/* 윤학 */
+.profile__header {
+  display: flex;
+  padding: 5px 5px;
+  border-bottom: 3px solid #000;
+}
+/* 타이틀 */
+.profile__header .title {
+  font-size: 24px;
+  margin: 0;
+}
+/* 이미지 영역 */
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.image__title {
+  margin-top: 30px;
+}
+.image__area {
+  padding: 20px;
+}
+
+.image__title {
+  font-size: 18px;
+}
+/* 프로필 이미지 수정 */
+.profile__image {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.profile__area img {
+  width: 100%;
+  height: 100%;
+}
+/* 이미지 라벨 */
+.upload__label {
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  margin-right: 5px;
+}
+/* 이미지 인풋 */
+#upload {
+  display: none;
+}
+/* 변경버튼 */
+#changeBtn {
+  display: none;
+}
+/* 변경 버튼 라벨 */
+.changeBtn__label {
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  margin-right: 5px;
+}
+/* 회원 정보 섹션 */
+.profile__infor {
+  margin: 0;
+  padding-top: 20px;
+}
+.profile__area {
+  padding: 10px 200px 18px 0;
+}
+/* h3 */
+.profile__area__title {
+  font-size: 18px;
+}
+.inner__inforArea,
+.inner__inforArea__pw,
+.inner__inforArea__nn {
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 10px;
+}
+/* 닉변시 뜨는 창 */
+.modify__area__pw,
+.modify__area__nn {
+  display: none;
+  position: relative;
+  padding: 10px 10px;
+}
+.modify__title {
+  font-size: 13px;
+  color: #000;
+  font-weight: bold;
+}
+.modify__inputarea {
+  position: relative;
+}
+#changeNickName,
+#changePassword {
+  outline: none;
+  width: 500px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #dfe6e9;
+  font-size: 16px;
+  padding: 7px;
+}
+.modify__btns {
+  padding-top: 15px;
+  text-align: center;
+}
+.nn__modify__ok,
+.nn__modify__no,
+.pw__modify__ok,
+.pw__modify__no {
+  display: inline-block;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  padding: 5px 5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* 변경 끝 */
+.inner__title {
+  font-size: 13px;
+  color: #95a5a6;
+}
+#email,
+#name,
+#defaultNickName,
+#phoneNumber,
+#defaultPassword {
+  outline: none;
+  width: 500px;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+/* 닉변 버튼 */
+.changeNicknameBtn,
+.changePwBtn {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  padding: 5px 5px;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+/* 탈퇴 버튼 */
+.deleteBTN {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  padding: 5px 5px;
+  color: #34495e;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .content_container {
+    grid-template-columns: none;
+    height: auto;
+    padding: 20px;
+  }
+
+  .product_list_section footer .pagination_ul {
+    max-width: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .changeNicknameBtn,
+  .changePwBtn {
+    margin: 0 auto;
+  }
+  #defaultNickName,
+  #defaultPassword {
+    width: 50%;
+  }
+}

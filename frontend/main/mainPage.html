@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Main Page</title>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+        crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="mainPage.css">
+        <link rel="stylesheet" href="header.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+            <div class="navContainer">
+                <div class="nav__inner">
+                <h1><a href="mainPage.html" class="navLogo">GOT'EM</a></h1>
+                <div class="navUser">
+                    <img src="" alt="유저프로필" id="navUserImg" />
+                    <div class="navUser">
+                    <ul>
+                        <li>
+                        <a href="#" class="navUserBtn"></a>
+                        <ul class="dropdown">
+                            <li>
+                            <a href="../user/userPage.html">마이페이지</a>
+                            </li>
+                            <li>
+                            <button type="button" id="logoutBtn">로그아웃</button>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </nav>
+        </header>
+        <main> 
+            <article class="mainPage">
+                <article class="hotProduct">
+                    <div class="title">
+                        Hot
+                        <span class='subTitle'>인기 제품</span>
+                    </div>
+                    <div class="container">
+                        <div class="TopGallery"></div>
+                        <span class="left-arrow"><i class="fas fa-chevron-left"></i></span>
+                        <span class="right-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+                <section class="banner">
+                    <div class="description"> 
+                        <div class="left-image"></div>
+                        <div class="right-image"></div>
+                        <p class="textLogo">Got ' em</p>
+                    </div>
+                    <p class="info">
+                        <i class="fas fa-arrow-down"></i><span>더 많은 제품보기</span>
+                    </p>
+                </section>
+                
+                <article class="dropProduct">
+                    <div id="totalProduct">
+                        
+                    </div>
+                    <article class="allProduct">
+                        
+                    </article>
+                </article>
+            </article>
+        </main>
+        <script src="header.js"></script>
+        <script src="mainPage.js"></script>
+    </body>
+</html>

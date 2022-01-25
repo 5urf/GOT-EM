@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="join.css" />
+    <link rel="stylesheet" href="../toast/Toast.css" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <main role="main">
+      <a href="../beforeMainPage/beforMainPage.html"><h2 class="logo"></h2></a>
+      <section class="join-form">
+        <div class="join-form-area">
+          <h1>회원가입</h1>
+          <form action="/singup" method="post" id="form">
+            <div class="input-area">
+              <label class="input-label">이메일 계정</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="사용하실 이메일 계정을 입력해주세요."
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="input-area-pw">
+              <label class="input-label">비밀번호</label>
+              <div class="txt-area">
+                <span
+                  >비밀번호는 영문자와 특수문자 조합의 6~24자리이어야
+                  합니다.</span
+                >
+              </div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="사용하실 비밀번호를 입력해 주세요."
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="input-area">
+              <input
+                type="password"
+                name="passwordChk"
+                id="passwordChk"
+                placeholder="비밀번호를 한번 더 입력해 주세요."
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="input-area">
+              <label class="input-label">이름</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="성함을 입력해 주세요."
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="input-area">
+              <label class="input-label">휴대폰 번호</label>
+              <div class="txt-area">
+                <span
+                  >정확한 휴대폰 번호를 입력해 주세요. (이메일 계정 찾기시에
+                  사용됩니다)</span
+                >
+              </div>
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                placeholder="ex) 01012341234"
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="input-area">
+              <label class="input-label">닉네임</label>
+              <input
+                type="text"
+                name="nickName"
+                id="nickName"
+                placeholder="사용하실 닉네임을 입력해주세요."
+                autocomplete="off"
+                required
+              />
+              <div class="error-area">
+                <small></small>
+              </div>
+            </div>
+            <div class="chk-wrap">
+              <div class="all-agree">
+                <input type="checkbox" name="checkAll" id="checkAll" />
+                <label for="checkAll">전체 동의</label>
+              </div>
+              <div class="ckh-chk-wrap">
+                <div class="input-check-area">
+                  <input
+                    type="checkbox"
+                    name="agreement"
+                    id="tos"
+                    class="agreement"
+                    required
+                  />
+                  <label for="tos">이용약관 동의</label>
+                </div>
+                <div class="input-check-area">
+                  <input
+                    type="checkbox"
+                    name="agreement"
+                    id="collectionAgreement"
+                    class="agreement"
+                    required
+                  />
+                  <label for="collectionAgreement"
+                    >개인정보 수집 및 이용 동의</label
+                  >
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="join-btn">가입하기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="join.js"></script>
+  <script src="../toast/Toast.js"></script>
+</html>

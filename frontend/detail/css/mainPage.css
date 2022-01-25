@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap%27');
+
+html {
+    --main-font-color:#222;
+    --main-background-color: rgb(245, 241, 233);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+
+
+/* 메인 페이지 mainPage.html */
+
+main .mainPage{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+
+/* 메인페이지 상단 인기아이템 */
+
+main .hotProduct{
+    min-height: 400px;
+    
+}
+/* 인기상품 */
+
+.hotProduct .title{
+    background-color: rgb(247, 245, 241);
+    font-size: 25px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.hotProduct .title > span {
+    font-size: 15px;
+    color: grey
+}
+.hotProduct .container {
+    width:100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hotProduct .container > span {
+    display: inline-block;
+    color: rgba(0,0,0,.7)
+}
+.hotProduct .container .left-arrow {
+    position: absolute;
+    top:50%;
+    left:1%;
+    font-size: 25px;
+}
+.hotProduct .container .right-arrow {
+    position: absolute;
+    top:50%;
+    right:1%;
+    font-size: 25px;
+}
+/* 배너 */
+.banner {
+    /* margin-top: 30px; */
+}
+.banner .description {
+    position: relative;
+    height:400px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* background-image: url('/shoes.png'); 
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+/* shadow 이미지 */
+.banner .description::after { 
+    content:" ";
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.textLogo {
+    position: absolute;
+    z-index: 8;
+    color: white;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%,-50%);
+    font-style: italic;
+}
+.left-image {
+    width:50%;
+    background-image: url('shoes.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right-image {
+    width:50%;
+    background-image: url('shoes.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hotProduct .description i {
+    margin-right: 20px;
+}
+.banner .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80px;
+}
+.banner .info > * {
+    font-size: 20px;
+}
+.banner .info > i {
+    margin-right: 10px;
+}
+.banner .info > span {
+    color: rgb(0,0,0,0.8);
+    font-weight: 600;
+}
+
+/* 탑 이미지 갤러리 */
+.TopGallery {
+    margin-top: 30px;
+    width:95%;
+    height:250px;
+    display: flex;
+    overflow-x: scroll;
+    /* border: 1px solid rgba(0,0,0,.1); */
+    padding: 10px;
+    animation-name: slideIn;
+    animation-duration:1.5s;
+}
+
+.TopGallery > .item {
+    min-height:250px;
+    margin-right: 20px;
+    box-shadow: 0 0px 10px rgba(0,0,0,.7);
+    border: 1px solid gery;
+}
+
+.TopGallery .item .imageWapper {
+    max-height: 230px;
+    /* height:90%; */
+}
+
+.TopGallery .item .name {
+    position: relative;
+}
+
+
+
+.imageWrapper img {
+    height:100%;
+}
+
+.TopGallery .item .name {
+    text-align: center;
+    font-weight: 400;
+}
+/* main .hotProduct .hotItem {
+    border: 1px solid black;
+    flex-grow: 1;
+    min-height: 200px;
+    margin: 10px;
+} */
+
+/* main .hotProduct .leftBtn,
+.rightBtn {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+} */
+
+main .dropProduct { 
+    padding: 20px;
+    background-color: rgb(247, 245, 241);
+}
+/* 메인페이지 하단 모든 아이템 */
+main #totalProduct { /* 민우수정 */
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: bold;
+    
+}
+ 
+/* 메인 화면 래퍼감싸는부분  민우수정*/
+main .allProduct {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    animation-name: slideIn;
+    animation-duration:1.5s;
+}
+@keyframes slideIn { /* 애니메이션 추가 */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* main .allProduct > div {
+    margin-right: 20px;
+} */
+
+/* 각 아이템 버튼 */
+.eachItemBtn { 
+    border: none;
+    box-shadow: 0 0px 10px rgba(0,0,0,.2);
+    overflow: hidden;
+    border-radius: 30px; 
+    
+}
+.eachItem {
+    position: relative;
+    
+}
+.eachItem:hover { 
+    transform: scale(1.05);
+    transition: all .3s;
+}
+
+
+main .allProduct .eachItem { 
+    margin-right: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.likeStatus {
+    /* display: inline-block; */
+    text-align: right;
+    font-size: 13px;
+    /* padding-left: 50%; */
+}
+main .allProduct .eachItemSeries {
+    font-size: 14px;
+    padding: 10px 0 0 10px;
+    text-decoration: underline;
+    text-decoration-color: grey;
+    text-decoration-thickness: 2px;
+}
+main .allProduct .eachItemBrand {
+    font-style: italic;
+    backface-visibility: hidden;
+}
+
+main .allProduct .eachItemName {
+    padding-left: 10px;
+    padding-top: 2px;
+    backface-visibility: hidden;
+    /* text-align: center; */
+    /* font-weight: bold; */
+    /* margin-top: 2px; */
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+main .allProduct .eachItemBottom {
+    padding-left: 10px;    
+}
+
+.eachItemName > span { 
+    font-size: 25px;
+}
+
+.eachItemBottom {
+    backface-visibility: hidden;
+    font-size: 13px;
+    position: absolute;
+    top:63%;
+    right:10%;
+}
+.eachItemBottom > span {
+    font-size: 20px;
+}
+
+.active { 
+    color: red;
+}
+
+.eachItemPrice {
+    text-align: left;
+    padding-left: 10px;
+    backface-visibility: hidden; /* 애니메이션 효과 부작용 방지*/ 
+}
+
+/* detailPage */
+
+main .feedAll {
+    margin: 90px auto;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    main .feedAll {
+        flex-direction: column;
+    }
+}
+
+
+/* product 정보 */
+main article {
+    flex-grow: 1;
+}
+
+.releaseTitle {
+    font-size: 15px;
+    padding-top: 20px;
+    color:rgba(0,0,0,.5);
+}
+main .productContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: stretch;
+}
+
+main .shoes {
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+main .productContainer #shoesImg {
+    min-width: 300px;
+    border: 1px solid gray;
+    max-width: 400px;
+    border: none;
+    box-shadow: 0 0px 10px rgba(0,0,0,.2);
+    overflow: hidden;
+    border-radius: 30px; 
+}
+
+@media screen and (max-width: 768px) {
+    main .productContainer #shoesImg{
+      max-width: 100%;
+    }
+}
+
+main .productContainer #shoesImg img { 
+    width: 100%;
+    object-fit: cover;
+}
+
+main .productContainer #shoesName {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main .productContainer .shoesDetail {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .productContainer .shoesDetailLike {
+    display: flex;
+}
+
+main .productContainer #like {
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+}
+
+main .productContainer .reviewsAll {
+    display: flex;
+  }
+  
+  main .productContainer .reviewsAllTitle{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    font-style: italic;
+  }
+  
+  main .productContainer .reviewsAllDetail {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  main .productContainer .rat {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  main .productContainer .rad {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    flex-grow: 1;
+  }
+  
+  main .productContainer .reviewsAllGraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  main .productContainer .reviewsAllPeople {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+  }
+  
+  main .productContainer .rap {
+      flex-grow: 1;
+      text-align: end;
+  }
+  @media screen and (max-width: 768px) {
+    main .productContainer progress{
+      width: 100%;
+    }
+  
+    main .productContainer .rap {
+        text-align: center;
+    }
+  }
+/* main .productContainer .chartContainer {
+    display: grid;
+    border: solid 0.5px black;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 100px 100px;
+}
+
+main .productContainer .chart {
+    border: solid 0.5px black;
+} */
+
+
+/* 게시글 파트 */
+
+main .feedContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+article .feedContainer table {
+    width: 100%;
+    border-top: 2px solid #3b4890;
+    border-collapse: collapse;
+}
+
+article .feedContainer table tr,
+td {
+    height: 40px;
+    text-align: center;
+}
+
+article .feedContainer table #feedNav {
+    border-bottom: 2px solid #3b4890;
+}
+
+article .feedContainer table .feedList tr {
+    border-bottom: 1px solid gray;
+}
+
+article .feedContainer .navigation {
+    display: flex;
+    justify-content: center;
+}
+article .feedContainer .navigation button {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer .navigation button:hover {
+    background-color: white;
+    color: black;    
+}
+
+article .feedContainer .posting {
+    display: flex;
+    justify-content: end;
+}
+article .feedContainer #posting {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer #posting:hover {
+    background-color: white;
+    color: black; 
+}
+
+/* 게시글 작성 mainPagePost*/
+
+article .feedContainer .postingTitle {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 2px #3B4890;
+    border-bottom: solid 2px #3B4890;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+article .feedContainer #backMain {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer #backMain:hover {
+    background-color: white;
+    color: black;
+}
+
+article .feedContainer #title {
+    font-size: 18px;
+}
+article .feedContainer #postingTitle {
+    margin-bottom: 10px;
+}
+
+article .feedContainer .cpn, .fit, .feeling, .color {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+article .feedContainer #postingText {
+    width: 100%;
+}
+
+article .feedContainer .submit {
+    display: flex;
+    justify-content: end;
+}
+article .feedContainer #submit {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer #submit:hover {
+    background-color: white;
+    color: black;
+}
+
+article .feedContainer .check {
+    display: flex;
+}
+
+/* 게시글 조회 mainPageFeed*/
+
+article .feedContainer .postingDetail {
+    display: flex;
+    justify-content: space-between;
+}
+
+article .feedContainer .author-time {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+article .feedContainer .postingDetail #author {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: solid 1px gray;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+article .feedContainer .postingDetail #time {
+    color: gray;
+    font-size: 14px;
+    color: gray;
+}
+
+article .feedContainer .controlPost {
+    display: flex;
+    flex-direction: row;
+}
+
+article .feedContainer #changePost,
+#deletePost {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer #changePost:hover,
+#deletePost:hover {
+    background-color: white;
+    color: black;
+}
+
+article .feedContainer .reviews {
+    border-bottom: 2px solid #3b4890;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+article .feedContainer .feedDetail {
+    flex-grow: 1;
+    min-height: 150px;
+    margin: 10px;
+}
+
+article .feedContainer .replies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px #3B4890;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+article .feedContainer .repliesTitle {
+    border-top: 1px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+article .feedContainer .replies #showHide button {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer .repliesWrite {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+article .feedContainer .repliesDetail {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+
+article .feedContainer #repliesSubmit {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer #repliesSubmit:hover {
+    background-color: white;
+    color: black;
+}
+
+article .feedContainer .repliesFeedTime {
+    margin-left: 5px;
+    padding-left: 5px;
+    border-left: 1px solid gray;
+    font-size: 14px;
+    color: gray;
+    
+}
+
+article .feedContainer .repliesFeedAuthor {
+    font-weight: bold;
+}
+
+article .feedContainer .repliesControl {
+    display: flex;
+    justify-content: space-between;
+}
+
+article .feedContainer .repliesFeedContent{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+article .feedContainer .repliesControl button {
+    background-color: #2b96ed;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+article .feedContainer .repliesControl button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 메인페이지 애니메이션 */ /*민우추가*/

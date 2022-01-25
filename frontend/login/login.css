@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+.logo::before{
+  display: inline-block;
+  content: '';
+  /* border: 1px solid red; */
+  background-image: url('./images/loginLogo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 50px;
+  width: 300px;
+  height: 50px;
+}
+.input-area {
+  width: 400px;
+  position: relative;
+  margin-top: 20px;
+}
+.input-area input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-size: 18px;
+  color: #2c3e50;
+  outline: none;
+  margin-top: 20px;
+}
+.input-area:first-child {
+  margin-top: 0;
+}
+.input-area label {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 18px;
+  color: #2c3e50;
+  transition: all 0.5s ease;
+}
+.input-area input:focus + label,
+.input-area input:valid + label {
+  top: -2;
+  font-size: 13px;
+  color: #3498db;
+}
+.btn-area {
+  margin-top: 30px;
+}
+.btn-area button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-area .lgn-btn {
+  background-color: #3498db;
+}
+.btn-area .so-btn {
+  background-color: #55efc4;
+}
+
+.btn-area .so-btn {
+  margin-top: 10px;
+}
+.lgn-footer {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #d3d3d3;
+  font-size: 12px;
+}
+
+/* 경고 메세지 */
+.input-area.error small {
+  font-size: 10px;
+  color: red;
+  padding-left: 10px;
+}
+/* 유효성 통과시 */
+.input-area.success small {
+  font-size: 10px;
+  color: #3498db;
+  padding-left: 10px;
+}
+@media screen and (max-width: 550px) {
+  .input-area {
+    width: 100%;
+  }
+
+  .input-area label{
+    padding: 0 20px;
+    font-size: 12px;
+  }
+
+  .input-area input {
+    margin: 20px 20px;
+    width: 90%;
+  }
+
+  .btn-area {
+    margin: 0 20px;
+  }
+
+  .btn-area .lgn-btn, .btn-area .so-btn {
+    border-radius: 0;
+    margin-bottom: 5px;
+  }
+  
+  .lgn-footer {
+    margin: 0 20px;
+  }
+}

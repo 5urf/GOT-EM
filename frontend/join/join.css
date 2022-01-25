@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  display: block;
+}
+main {
+  width: 560px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 56px;
+  margin-bottom: 40px;
+}
+main .logo {
+  text-align: center;
+}
+.logo::before {
+  display: inline-block;
+  content: '';
+  background-image: url('./images/logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 23px;
+  width: 300px;
+  height: 50px;
+}
+/* form wrap */
+.join-form-area {
+  padding: 56px 80px;
+  border: 1px solid #e4e5ed;
+  width: 100%;
+}
+.join-form-area h1 {
+  font-size: 25px;
+  font-weight: normal;
+  color: #2c3e50;
+  line-height: normal;
+  margin-bottom: 40px;
+  margin-top: 0;
+  text-align: center;
+}
+.input-area {
+  width: 400px;
+  position: relative;
+  padding-bottom: 16px;
+}
+.input-area input,
+.input-area-pw input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: transparent;
+}
+/* 비밀 번호 */
+.input-area-pw {
+  width: 400px;
+  position: relative;
+  padding-bottom: 8px;
+}
+/* 안내 메세지 영역 */
+.txt-area {
+  margin: -15px 0 5px 0;
+}
+.txt-area span {
+  font-size: 10px;
+  color: rgb(114, 117, 133);
+}
+/* input label */
+.input-label {
+  position: relative;
+  display: inline-block;
+  color: #2c3e50;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+/* require로 수정으로 인해 *붙도록 수정 */
+
+/* *표시 */
+.input-label::after {
+  position: relative;
+  left: 2px;
+  top: -2px;
+  content: '*';
+  color: rgb(255, 114, 98);
+}
+/* 체크박스 */
+.chk-wrap {
+  padding: 16px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+/* 모두 동의 */
+.all-agree {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #999;
+}
+.all-agree label {
+  position: relative;
+  top: -1px;
+  font-size: 15px;
+  cursor: pointer;
+}
+/* 모두 동의 아래 부분 */
+.ckh-chk-wrap {
+  margin-top: 16px;
+}
+.input-check-area {
+  margin-bottom: 4px;
+}
+.input-check-area label {
+  position: relative;
+  font-size: 12px;
+  cursor: pointer;
+  top: -1px;
+}
+/* 버튼 */
+.join-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 에러메세지 출력공간 */
+.error-area {
+  margin: 0;
+}
+/* 유효성 검사 실패시 */
+.error small {
+  font-size: 10px;
+  color: red;
+}
+/* 성공시 */
+.success small {
+  font-size: 10px;
+  color: #3498db;
+}
+@media screen and (max-width: 550px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    width: 100%;
+  }
+
+  .join-form-area {
+    padding: 20px;
+    border: none;
+  }
+
+  .input-area, .input-area-pw {
+    width: 100%;
+  }
+}

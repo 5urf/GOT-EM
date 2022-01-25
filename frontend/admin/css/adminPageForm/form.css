@@ -1,0 +1,211 @@
+/* form */
+.form_section {
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+}
+
+.form_section label {
+  text-align: left;
+  margin-bottom: 4px;
+}
+.form_section .form_control {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.form_section .form_control input {
+  padding: 10px;
+}
+
+.form_section .form_control_column {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.form_section .form_control #input_product_image {
+  width: 390px;
+  height: 100px;
+}
+
+.form_section .form_control_column input {
+  border-radius: 10px;
+  border: 1px solid #999999;
+}
+
+.form_section .form_control_column input:focus {
+  border: 1px solid #243491;
+}
+
+.form_section .form_control_column .form_control_image {
+  display: flex;
+  align-items: center;
+}
+
+.form_guideline {
+  font-size: 12px;
+  text-align: left;
+  padding-left: 5px;
+  color: rgb(165, 8, 8);
+}
+
+.form_section .form_control_button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form_section .form_control_button input {
+  max-width: 350px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+
+  padding: 15px;
+  margin: 10px auto;
+
+  transition: opacity 0.2s;
+}
+.form_section .form_control_button input:hover {
+  opacity: 0.7;
+}
+
+.form_section .form_control_button input:disabled {
+  opacity: 0.3;
+}
+
+.form_section .form_control_button #preview_button {
+  background-color: #868585;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.form_section .form_control_button #confirm_product_image_btn {
+  background-color: #ced4da;
+}
+
+.form_section .form_control_button .image_remove_button_wrap {
+  display: flex;
+  justify-content: center;
+}
+.form_section .form_control_button .image_remove_button_wrap input {
+  position: relative;
+  width: inherit;
+
+  background-color: #2b96ed;
+  color: #fff;
+
+  padding: 5px 15px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  margin: 7px;
+  opacity: 0.9;
+}
+
+.form_section .form_control_button .image_remove_button_wrap input:hover {
+  opacity: 0.6;
+}
+.form_section .form_control_button .image_remove_button_wrap .remove_select {
+  opacity: 0.3;
+}
+
+.form_section .form_control_button #post_button {
+  background-color: #2b96ed;
+  color: white;
+}
+.form_section .form_control_button #patch_button {
+  background-color: #2b96ed;
+  color: white;
+}
+
+.form_section .form_control_button #remove_button {
+  background-color: #ad0d0d;
+  color: white;
+}
+
+/* preview */
+
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+.product_section {
+  display: grid;
+  align-items: start;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+
+  text-align: center;
+  overflow: hidden;
+}
+.product_image_wrap {
+  width: 450px;
+  height: 350px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.product_image_wrap .product_image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.product_image_change_button {
+  margin-top: 10px;
+}
+
+.product_image_change_button > input {
+  background-color: #ffffff;
+  border: 1px solid #868585;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.product_image_change_button > input:hover {
+  background-color: #2b96ede0;
+  color: #fff;
+
+  border: 1px solid #2b96ed;
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  transition: background-color 0.2s;
+}
+
+.detail_product {
+  display: flex;
+  justify-content: center;
+}
+.detail_box {
+  padding: 0 12px;
+}
+
+.product_chart {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_chart > li {
+  display: inline-block;
+  width: 50%;
+  height: 120px;
+
+  border: 1px solid #ced4da;
+}
+.product_chart > .chart_c {
+  border-bottom-left-radius: 20px;
+}
+.product_chart > .chart_d {
+  border-bottom-right-radius: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.success {
+  color: green;
+}

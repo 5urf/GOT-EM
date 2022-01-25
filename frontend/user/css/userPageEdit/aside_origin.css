@@ -1,0 +1,36 @@
+aside {
+  border-radius: 20px;
+  margin: 10px;
+}
+.side_bar_nav {
+  text-align: left;
+}
+.side_bar_nav li {
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+  aside {
+    border: 1px solid #444444;
+    margin: 1vh 0;
+  }
+  .side_bar_nav {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 2vh;
+  }
+  .side_bar_nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .side_bar_nav li {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .side_bar_nav {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 2vh;
+  }
+}

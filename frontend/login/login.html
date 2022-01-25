@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../font/font.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../toast/Toast.css" />
+    <title>GOT'EM</title>
+  </head>
+  <body>
+    <section class="login-form">
+      <a href="../beforeMainPage/beforMainPage.html"><h2 class="logo"></h2></a>
+      <form action="/auth" method="post" id="form">
+        <div class="input-area">
+          <input
+            type="email"
+            name="userId"
+            id="email"
+            autocomplete="off"
+            required
+          />
+          <label for="userId">이메일 계정</label>
+          <div class="txt-area">
+            <small></small>
+          </div>
+        </div>
+        <div class="input-area">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="off"
+            required
+          />
+          <label for="password">비밀번호</label>
+          <div class="txt-area"></div>
+          <small></small>
+        </div>
+        <div class="btn-area">
+          <button type="submit" class="lgn-btn">로그인</button>
+          <a href="#"><button type="button" class="so-btn">소셜 로그인</button></a>
+        </div>
+      </form>
+      <div class="lgn-footer">
+        <a href="../join/join.html">회원가입하기</a>
+        <a href="../find/find.html">아이디•비밀번호 찾기</a>
+      </div>
+    </section>
+  </body>
+  <script src="login.js"></script>
+  <script src="../toast/Toast.js"></script>
+</html>

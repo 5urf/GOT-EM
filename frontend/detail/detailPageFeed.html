@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="./css/mainPage.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="navContainer">
+          <div class="nav__inner">
+            <h1><a href="../main/mainPage.html" class="navLogo">GOT'EM</a></h1>
+            <div class="navUser">
+              <img src="" alt="유저프로필" id="navUserImg" />
+              <div class="navUser">
+                <ul>
+                  <li>
+                    <a href="#" class="navUserBtn"></a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="../user/userPage.html">마이페이지</a>
+                      </li>
+                      <li>
+                        <button type="button" id="logoutBtn">로그아웃</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="backGround">
+      <article class="feedAll">
+        <div class="productContainer">
+          <div class="shoes" id="shoesImg">사진이 들어올 자리</div>
+          <div class="shoes" id="shoesName">상품명이 들어올 자리</div>
+          <div class="shoesDetail">
+            <div class="shoesDetailLike">
+              <div class="likes">좋아요 개수</div>
+              <div class="like">
+                <button id="like">좋아요인지 아닌지 확인하는 버튼</button>
+              </div>
+            </div>
+            <div class="shoes" id="shoesPrice">가격이 들어올 자리</div>
+          </div>
+          <div class="reviewsAll">
+            <div class="reviewsAllTitle">
+              <div class="rat">사이즈</div>
+              <div class="rat">착화감</div>
+              <div class="rat">색상</div>
+            </div>
+            <div class="reviewsAllDetail">
+              <div class="rad">작아요</div>
+              <div class="rad">딱 맞아요</div>
+              <div class="rad">커요</div>
+              <div class="rad">좋아요</div>
+              <div class="rad">적당해요</div>
+              <div class="rad">나빠요</div>
+              <div class="rad">선명해요</div>
+              <div class="rad">적당해요</div>
+              <div class="rad">흐려요</div>
+            </div>
+            <div class="reviewsAllGraph"></div>
+            <div class="reviewsAllPeople"></div>
+          </div>
+        </div>
+        <div class="feedContainer">
+          <div class="backMain">
+            <button id="backMain">뒤로가기</button>
+          </div>
+          <div class="postingTitle">
+            <div id="title">테스트용 제목입니다.</div>
+            <div class="postingDetail">
+              <div class="author-time">
+                <div id="author">작성자</div>
+                <div id="time">작성시간</div>
+              </div>
+              <div class="controlPost">
+                <div class="changePost">
+                  <button id="changePost">수정하기</button>
+                </div>
+                <div class="deletePost">
+                  <button id="deletePost">삭제하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews">
+            <div id="reviewsFit">사이즈</div>
+            <div id="reviewsFeeling">착화감</div>
+            <div id="reviewsColor">색감</div>
+          </div>
+          <div class="feedDetail">테스트 피드입니다.</div>
+          <div class="replies">
+            <div id="repliesAll">전체 댓글(댓글 수)</div>
+            <div id="showHide">
+              <button>숨기기</button>
+            </div>
+          </div>
+          <div class="repliesTitle">
+            <div id="repliesTitle">댓글 작성하기</div>
+          </div>
+          <div class="repliesWrite">
+            <textarea
+              name="repliesWrite"
+              id="repliesWrite"
+              cols="100"
+            ></textarea>
+            <div class="repliesSubmit">
+              <button id="repliesSubmit">등록</button>
+            </div>
+          </div>
+          <div class="repliesFeed"></div>
+        </div>
+      </article>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    ></script>
+    <script src="./js/detailAll.js"></script>
+    <script src="./js/detailPageFeed.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

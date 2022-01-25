@@ -1,0 +1,116 @@
+/* 상품내역 section */
+
+.product_list_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.product_list_section {
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  /* min-height: 600px; */
+}
+table {
+  border-spacing: 30px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+table th {
+  border-top: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+table .th_title_info {
+  text-align: left;
+  padding-left: 50px;
+}
+table td {
+  min-height: 100px;
+  height: 100px;
+
+  font-size: 14px;
+  border-bottom: 1px solid #ced4da;
+}
+
+table td img {
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  vertical-align: bottom;
+  margin: 10px;
+
+  width: 130px;
+  height: 120px;
+}
+table td .table_product_info {
+  display: table;
+  table-layout: fixed;
+  text-align: left;
+}
+table td .table_product_info img {
+  display: table-cell;
+}
+table td .table_product_info ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+table td .table_product_info ul > li {
+  margin: 10px 0;
+}
+
+table td .product_enter,
+.post_enter {
+  background-color: #2b96ed;
+  border: none;
+  border-radius: 5px;
+
+  padding: 7px 10px;
+  font-weight: 700;
+  color: white;
+  transition: opacity 0.2s;
+}
+table td .product_enter:hover,
+.post_enter:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+.product_list_section footer {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.pagination_wrap {
+  display: inline-block;
+}
+
+.pagination_wrap .pagination_nav {
+  width: 200px;
+}
+.pagination_wrap .pagination_nav .pagination_ul {
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.pagination_wrap .pagination_nav .pagination_ul .pagination_li {
+  flex: 1;
+}
+.pagination_wrap .pagination_nav .pagination_ul .pagination_li > a {
+  width: 100%;
+  display: inline-block;
+}
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+.selected {
+  border: 1px solid #2b96ed;
+  border-radius: 5px;
+}
